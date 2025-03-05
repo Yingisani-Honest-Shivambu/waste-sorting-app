@@ -1,4 +1,4 @@
-package com.enviro.assessment.grad001.YingisaniHonestShivambu.waste_sorting_app;
+package com.enviro.assessment.grad001.YingisaniHonestShivambu;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
