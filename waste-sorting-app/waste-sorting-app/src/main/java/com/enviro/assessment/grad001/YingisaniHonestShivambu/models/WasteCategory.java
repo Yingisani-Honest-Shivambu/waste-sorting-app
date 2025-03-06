@@ -25,4 +25,5 @@ public class WasteCategory {
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<RecyclingTip> tips;
 
+
 }
