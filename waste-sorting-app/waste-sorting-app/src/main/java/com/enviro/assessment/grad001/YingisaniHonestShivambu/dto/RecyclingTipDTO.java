@@ -17,6 +17,7 @@ public class RecyclingTipDTO {
     @NotBlank(message = "Content cannot be empty")
     @Size(min = 10, max = 500, message = "Content must be between 10 and 500 characters")
     private String content;
+
     private Long categoryId;
     private String categoryName;
 }
