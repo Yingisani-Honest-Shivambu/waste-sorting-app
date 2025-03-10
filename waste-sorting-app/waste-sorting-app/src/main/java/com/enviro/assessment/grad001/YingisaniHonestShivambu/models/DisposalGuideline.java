@@ -15,10 +15,11 @@ public class DisposalGuideline {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     private  Long id;
+
     private String title;
     private String Instructions;
 
     @ManyToOne
-    @JoinColumn( name = "category_id")
+    @JoinColumn( name = "category_id", nullable = false)
     private WasteCategory category;
 }
