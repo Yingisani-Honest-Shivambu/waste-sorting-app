@@ -36,21 +36,21 @@ cd waste-sorting-api
 
 ### 2️⃣ Setup & Run the Application
 
-Using Maven
+## Using Maven
 
 mvn clean install
 mvn spring-boot:run
 
-Using IntelliJ or VS Code
+## Using IntelliJ or VS Code
 	1.	Open the project in IntelliJ IDEA / VS Code
 	2.	Navigate to WasteSortingAppApplication.java
 	3.	Click “Run”
 
 ⸻
 
-🛠 API Endpoints
+### 🛠 API Endpoints
 
-🌍 Waste Categories
+## 🌍 Waste Categories
 
 Method	Endpoint	Description
 POST	/wastemanagementapi/categories	Create a new waste category
@@ -63,7 +63,7 @@ DELETE	/wastemanagementapi/categories/{id}	Delete a waste category
 
 ⸻
 
-🗑️ Disposal Guidelines
+## 🗑️ Disposal Guidelines
 
 Method	Endpoint	Description
 POST	/wastemanagementapi/guidelines	Create a new disposal guideline
@@ -76,7 +76,7 @@ DELETE	/wastemanagementapi/guidelines/{id}	Delete a disposal guideline
 
 ⸻
 
-♻️ Recycling Tips
+## ♻️ Recycling Tips
 
 Method	Endpoint	Description
 POST	/wastemanagementapi/tips	Create a new recycling tip
@@ -89,7 +89,7 @@ DELETE	/wastemanagementapi/tips/{id}	Delete a recycling tip
 
 ⸻
 
-🛠 Database Configuration
+## 🛠 Database Configuration
 
 The application uses an H2 in-memory database.
 To access the H2 Console:
@@ -108,20 +108,20 @@ SELECT * FROM RECYCLING_TIPS;
 
 ⸻
 
-📖 API Documentation (Swagger)
+## 📖 API Documentation (Swagger)
 	•	Swagger UI: http://localhost:8081/swagger-ui.html
 	•	OpenAPI JSON: http://localhost:8081/v3/api-docs
 
 ⸻
 
-📮 Postman Collection
+## 📮 Postman Collection
 
 You can import the Postman Collection from:
 📌 Postman Collection Link : https://github.com/Yingisani-Honest-Shivambu/Enviro365_Waste_Management/blob/main/Waste%20Sorting%20API.postman_collection.json
 
 ⸻
 
-👨‍💻 Contributors
+## 👨‍💻 Contributors
 	•	Yingisani Honest Shivambu(Project Developer)
 	•	https://github.com/Yingisani-Honest-Shivambu
 
