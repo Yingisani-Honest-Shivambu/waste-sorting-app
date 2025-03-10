@@ -34,7 +34,7 @@ This API allows CRUD operations on these entities and is backed by an **H2 in-me
 git clone https://github.com/YOUR_GITHUB_USERNAME/waste-sorting-api.git
 cd waste-sorting-api
 
-2️⃣ Setup & Run the Application
+### 2️⃣ Setup & Run the Application
 
 Using Maven
 
