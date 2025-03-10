@@ -33,8 +33,8 @@ public class WasteCategoryController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<WasteCategory> updateCategory(@PathVariable Long id, @RequestBody WasteCategory category){
-        return ResponseEntity.ok(service.updateWasteCategory(id,category));
+    public ResponseEntity<WasteCategoryDTO> updateCategory(@PathVariable Long id, @Valid @RequestBody WasteCategoryDTO dto) {
+        return ResponseEntity.ok(service.updateWasteCategory(id, dto));
     }
 
     @DeleteMapping("/{id}")

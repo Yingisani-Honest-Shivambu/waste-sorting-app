@@ -47,11 +47,20 @@ public class WasteCategoryService {
         );
     }
 
-    public WasteCategory updateWasteCategory(Long id,WasteCategory updatedCategory){
-        WasteCategory category  = repository.findById(id)
-                .orElseThrow(()-> new RuntimeException("Waste Category was not found with id: "+id));
-        category.setName(updatedCategory.getName());
-        return repository.save(category);
+    public WasteCategoryDTO updateWasteCategory(Long id, WasteCategoryDTO dto) {
+        WasteCategory category = repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Waste Category not found with id: " + id));
+
+        category.setName(dto.getName());  //Update name
+        WasteCategory updatedCategory = repository.save(category);  //Save updates
+
+        //Return updated data including guidelines and tips count
+        return new WasteCategoryDTO(
+                updatedCategory.getId(),
+                updatedCategory.getName(),
+                updatedCategory.getGuidelines().size(),  //Count of guidelines
+                updatedCategory.getTips().size()  //Count of tips
+        );
     }
 
     public void deleteWasteCategory(Long id){
