@@ -124,7 +124,7 @@ This API allows CRUD operations on these entities and is backed by an **H2 in-me
 ### 📮 Postman Collection
 
 You can import the Postman Collection from this GitHub repository:  
-📌 **Postman Collection Link:** [https://github.com/Yingisani-Honest-Shivambu/waste-sorting-app/blob/main/waste-sorting-app/Waste%20Sorting%20API.postman_collection.json](#) 
+📌 **Postman Collection Link:** [https://github.com/Yingisani-Honest-Shivambu/waste-sorting-app/blob/main/waste-sorting-app/Waste%20Sorting%20API.postman_collection.json] 
 
 ---
 
