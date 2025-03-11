@@ -17,8 +17,10 @@ public class WasteCategory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private Long id;
+    
     private String name;
 
+    // One category can have multiple recycling tips
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<DisposalGuideline> guidelines;
 
