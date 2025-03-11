@@ -90,11 +90,11 @@ Using IntelliJ or VS Code
 
 | Method	| Endpoint	                      |Description                    |
 |---------------|-------------------------------------|-------------------------------|
-POST	/wastemanagementapi/tips	Create a new recycling tip
-GET	/wastemanagementapi/tips	Get all recycling tips
-GET	/wastemanagementapi/tips/{id}	Get a recycling tip by ID
-PUT	/wastemanagementapi/tips/{id}	Update a recycling tip
-DELETE	/wastemanagementapi/tips/{id}	Delete a recycling tip
+|POST		|/wastemanagementapi/tips	      |Create a new recycling tip     |
+|GET		|/wastemanagementapi/tips	      |Get all recycling tips         | 
+|GET		|/wastemanagementapi/tips/{id}	      |Get a recycling tip by ID      |
+|PUT		|/wastemanagementapi/tips/{id}	      |Update a recycling tip         |
+|DELETE		|/wastemanagementapi/tips/{id}	      |Delete a recycling tip         |
 
 
 
