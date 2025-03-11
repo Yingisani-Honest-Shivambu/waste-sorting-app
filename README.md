@@ -32,8 +32,8 @@ This API allows CRUD operations on these entities and is backed by an **H2 in-me
 ## 🚀 Getting Started
 
 ### 1️⃣ Clone the Repository
-git clone https://github.com/Yingisani-Honest-Shivambu/Enviro365_Waste_Management.git
-cd waste-sorting-api
+- **git clone https://github.com/Yingisani-Honest-Shivambu/Enviro365_Waste_Management.git 
+- **cd waste-sorting-api**
 
 
 
@@ -43,8 +43,8 @@ cd waste-sorting-api
 
 #### Using Maven
 
-mvn clean install
-mvn spring-boot:run
+- **mvn clean install**
+- **mvn spring-boot:run**
 
 #### Using IntelliJ or VS Code
 	1.	Open the project in IntelliJ IDEA or VS Code
@@ -124,7 +124,7 @@ mvn spring-boot:run
 ### 📮 Postman Collection
 
 You can import the Postman Collection from this GitHub repository:  
-📌 **Postman Collection Link:** [Waste Sorting API Postman Collection](#) *(Replace with actual link)*
+📌 **Postman Collection Link:** [https://github.com/Yingisani-Honest-Shivambu/Enviro365_Waste_Management/blob/main/Waste%20Sorting%20API.postman_collection.json](#) 
 
 ---
 
