@@ -3,6 +3,10 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
+/**
+ * Data Transfer Object (DTO) for RecyclingTip.
+ * Used to expose only necessary data while preventing direct entity exposure.
+ */
 @Getter
 @Setter
 @NoArgsConstructor

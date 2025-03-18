@@ -4,6 +4,10 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
+/**
+ * Data Transfer Object (DTO) for WasteCategory.
+ * Used to expose only necessary data to API consumers, avoiding direct exposure of the entity.
+ */
 @Getter
 @Setter
 @NoArgsConstructor

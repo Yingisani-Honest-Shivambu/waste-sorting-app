@@ -11,6 +11,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Service layer for RecyclingTip.
+ * Handles business logic and ensures valid category associations.
+ */
 @Service
 public class RecyclingTipService {
 
@@ -20,6 +24,10 @@ public class RecyclingTipService {
     @Autowired
     private WasteCategoryRepository categoryRepository;
 
+    /**
+     * Retrieves all recycling tips as DTOs.
+     * @return List of RecyclingTipDTO objects.
+     */
     public List<RecyclingTipDTO> getAllRecyclingTips() {
         return repository.findAll().stream()
                 .map(tip -> new RecyclingTipDTO(
@@ -31,6 +39,11 @@ public class RecyclingTipService {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Retrieves a specific recycling tip by ID.
+     * @param id The ID of the recycling tip.
+     * @return RecyclingTipDTO if found.
+     */
     public RecyclingTipDTO getRecyclingTipById(Long id) {
         RecyclingTip tip = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Recycling Tip not found with id: " + id));
@@ -42,6 +55,12 @@ public class RecyclingTipService {
                 tip.getCategory().getName());
     }
 
+    /**
+     * Creates a new recycling tip under a specified category.
+     * Ensures that the waste category exists before saving.
+     * @param dto RecyclingTipDTO containing the new tip details.
+     * @return The created RecyclingTipDTO.
+     */
     public RecyclingTipDTO createRecyclingTip(RecyclingTipDTO dto) {
         WasteCategory category = categoryRepository.findById(dto.getCategoryId())
                 .orElseThrow(() -> new RuntimeException("Waste Category not found with id: " + dto.getCategoryId()));
@@ -56,6 +75,13 @@ public class RecyclingTipService {
                 tip.getCategory().getName());
     }
 
+    /**
+     * Updates an existing recycling tip.
+     * Ensures the tip exists before updating.
+     * @param id The ID of the tip to update.
+     * @param dto RecyclingTipDTO containing the updated details.
+     * @return The updated RecyclingTipDTO.
+     */
     public RecyclingTipDTO updateRecyclingTip(Long id, RecyclingTipDTO dto) {
         RecyclingTip tip = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Recycling Tip not found with id: " + id));
@@ -72,6 +98,10 @@ public class RecyclingTipService {
                 tip.getCategory().getName());
     }
 
+    /**
+     * Deletes a recycling tip by ID.
+     * @param id The ID of the recycling tip to delete.
+     */
     public void deleteRecyclingTip(Long id) {
         RecyclingTip tip = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Recycling Tip not found with id: " + id));

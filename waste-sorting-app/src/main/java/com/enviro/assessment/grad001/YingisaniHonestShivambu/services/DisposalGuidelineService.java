@@ -11,6 +11,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * Service layer for DisposalGuideline.
+ * Handles business logic and ensures valid category associations.
+ */
 @Service
 public class DisposalGuidelineService {
     @Autowired
@@ -19,6 +23,9 @@ public class DisposalGuidelineService {
     @Autowired
     private WasteCategoryRepository categoryRepository;
 
+    /**
+     * Retrieves all disposal guidelines as DTOs.
+     */
     public List<DisposalGuidelineDTO> getAllDisposalGuidelines() {
         return repository.findAll().stream()
                 .map(guideline -> new DisposalGuidelineDTO(
@@ -31,6 +38,11 @@ public class DisposalGuidelineService {
                 .collect(Collectors.toList());
     }
 
+
+    /**
+     * Retrieves a single disposal guideline by its ID.
+     * Throws an exception if not found.
+     */
     public DisposalGuidelineDTO getDisposalGuidelineById(Long id) {
         DisposalGuideline guideline = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Disposal Guideline not found with id: " + id));
@@ -44,6 +56,10 @@ public class DisposalGuidelineService {
         );
     }
 
+    /**
+     * Creates a new disposal guideline under a specified category.
+     * Ensures the category exists before saving.
+     */
     public DisposalGuidelineDTO createDisposalGuideline(DisposalGuidelineDTO dto) {
         WasteCategory category = categoryRepository.findById(dto.getCategoryId())
                 .orElseThrow(() -> new RuntimeException("Waste Category not found with id: " + dto.getCategoryId()));
@@ -60,6 +76,9 @@ public class DisposalGuidelineService {
         );
     }
 
+    /**
+     * updates a disposal guideline by ID.
+     */
     public DisposalGuidelineDTO updateDisposalGuideline(Long id, DisposalGuidelineDTO dto) {
         DisposalGuideline guideline = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Disposal Guideline not found with id: " + id));
@@ -77,6 +96,9 @@ public class DisposalGuidelineService {
         );
     }
 
+    /**
+     * Deletes a disposal guideline by ID.
+     */
     public void deleteDisposalGuideline(Long id) {
         DisposalGuideline guideline = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Disposal Guideline not found with id: " + id));

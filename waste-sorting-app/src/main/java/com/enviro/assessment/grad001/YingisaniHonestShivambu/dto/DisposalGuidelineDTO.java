@@ -4,6 +4,10 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
 
+/**
+ * Data Transfer Object (DTO) for DisposalGuideline.
+ * Used to expose relevant data while hiding internal entity details.
+ */
 @Getter
 @Setter
 @NoArgsConstructor
